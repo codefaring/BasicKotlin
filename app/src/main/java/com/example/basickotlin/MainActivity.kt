@@ -10,18 +10,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
-
-        var myName = "코틀린"
-        var myAge: Int
-        myAge = 30
-        myAge = myAge + 1
-
         setContentView(binding.root)
-        binding.btnSay.setOnClickListener {
-            binding.textSay.text = "내 이름은 ${myName}이야! 나이는 ${myAge}살이지!"
+
+        val myName = "코틀린" // 이름을 바꿀 수 없다
+        var age: Int
+        age = 31
+        var myInfo: String
+//        myName = "자바" //에러 발생
+        when(age) {
+            30 -> {
+                Log.d("when문 결과값", "나이는 30살입니다}")
+                myInfo = "내 이름은 ${myName}이고, 나이는 30살입니다."
+            }
+            31 -> {
+                Log.d("when문 결과값", "나이는 31살입니다")
+                myInfo = "내 이름은 ${myName}이고, 나이는 31살입니다."
+            }
+            32 -> {
+                Log.d("when문 결과값", "나이는 32살입니다")
+                myInfo = "내 이름은 ${myName}이고, 나이는 32살입니다."
+            }
+            else -> {
+                Log.d("when문 결과값", "나이는 33살입니다")
+                myInfo = "내 이름은 ${myName}이고, 나이는 33살입니다."
+            }
         }
 
-
-        Log.d("BasicSyntax", "myName = $myName myAge = $myAge")
+        binding.btnSay.setOnClickListener{
+            binding.textSay.text = myInfo;
+        }
     }
 }
