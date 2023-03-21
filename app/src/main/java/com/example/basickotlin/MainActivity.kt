@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         var strList = mutableListOf<String>()
         strList.add("인덱스 0")
 
-        Log.d("num 리스트", "내가 좋아하는 숫자는 ${num[1]}, num배열크기 ${num.size}")
+        Log.d("num 리스트", "내가 좋아하는 숫자는 ${num[1]}, num배열크기 : ${num.size}")
         Log.d("strList 리스트", "${strList.get(0)}")
 
         // 컬렉션 맵
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         map.put("key2", "value2")
         map.put("key3", "value3")
         map.remove("key2")
+        map.put("key3", "update1")
 
         Log.d("map 맵", "${map.get("key3")}")
 
@@ -50,13 +51,13 @@ class MainActivity : AppCompatActivity() {
         set.add("화요일")
         set.add("수요일")
         set.add("목요일")
-//        set.add("목요일") // 에러발생
+        set.add("목요일")  // 값 추가 안됨
         set.remove("화요일")
 
         Log.d("set 셋", "set 전체 출력 : ${set}")
 
         binding.btnSay.setOnClickListener{
-            binding.textSay.text = "내가 좋아하는 과일은 ${fruit.get(1)}"
+            binding.textSay.text = "내가 좋아하는 과일은 ${set.size}"
         }
     }
 }
