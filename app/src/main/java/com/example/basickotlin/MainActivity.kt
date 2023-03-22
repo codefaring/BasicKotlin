@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         Log.d("배열값", "number[0] : $two, dayArray[5] : ${dayArray.get(4)}")
 
         // 컬렉션 리스트
-        var fruit = listOf("딸기", "망고", "사과")
+        var FRUIT = listOf("딸기", "망고", "사과")
         var num = mutableListOf("1", "3", "5")
-//        fruit.add("리치")   // 에러발생 : 상수배열로 값을 추가할 수 없음
+//        FRUIT.add("리치")   // 에러발생 : 상수배열로 값을 추가할 수 없음
         num.add("9")
         num.set(2, "7")
         num.removeAt(1)
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("set 셋", "set 전체 출력 : ${set}")
 
         binding.btnSay.setOnClickListener{
-            binding.textSay.text = "내가 좋아하는 과일은 ${set.size}"
+            binding.textSay.text = "내가 좋아하는 과일은 ${FRUIT.get(1)}"
         }
     }
 }
