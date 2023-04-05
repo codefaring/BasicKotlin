@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             in 4..8 -> println("x는 4 ~ 8")
             !in 9..10 -> println("x는 9 ~ 10 아님")
             else -> {
-                println("나머지는?!")
+                println("나머지는??!")
             }
         }
 
