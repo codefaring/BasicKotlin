@@ -40,8 +40,10 @@ class MainActivity : AppCompatActivity() {
         map.put("key1", "value1")
         map.put("key2", "value2")
         map.put("key3", "value3")
+        map.put("key3", "value4")
         map.remove("key2")
         map.put("key3", "update1")
+        map.replace("key3", "value4")
 
         Log.d("map 맵", "${map.get("key3")}")
 
@@ -56,16 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("set 셋", "set 전체 출력 : ${set}")
         
-        var x = 1
-        when(x) {
-            1 -> println("x는 1")
-            2, 3 -> println("x는 1 또는 2")
-            in 4..8 -> println("x는 4 ~ 8")
-            !in 9..10 -> println("x는 9 ~ 10 아님")
-            else -> {
-                println("나머지는??!")
-            }
-        }
+        println(set.contains("화요일"))    // false
 
         binding.btnSay.setOnClickListener{
             binding.textSay.text = "내가 좋아하는 과일은 ${FRUIT.get(1)}"
