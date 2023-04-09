@@ -40,10 +40,10 @@ class MainActivity : AppCompatActivity() {
         map.put("key1", "value1")
         map.put("key2", "value2")
         map.put("key3", "value3")
-        map.put("key3", "value4")
+        map.put("key4", "value4")
         map.remove("key2")
         map.put("key3", "update1")
-        map.replace("key3", "value4")
+        map.replace("key4", "update2")
 
         Log.d("map 맵", "${map.get("key3")}")
 
